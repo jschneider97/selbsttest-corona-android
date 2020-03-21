@@ -31,6 +31,7 @@
             android:id="@+id/buttonthree1"
             android:layout_width="match_parent"
             android:layout_height="85dp"
+            android:checked="true"
             android:text="RadioButton"
             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 

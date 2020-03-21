@@ -19,6 +19,7 @@
             android:id="@+id/radioButton12"
             android:layout_width="300dp"
             android:layout_height="90dp"
+            android:checked="true"
             android:text="RadioButton" />
 
         <RadioButton

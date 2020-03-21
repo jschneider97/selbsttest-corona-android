@@ -34,6 +34,7 @@
             android:id="@+id/buttoneight1"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:checked="true"
             android:text="RadioButton" />
 
         <RadioButton

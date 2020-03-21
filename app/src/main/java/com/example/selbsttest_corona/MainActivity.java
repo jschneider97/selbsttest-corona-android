@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.eightchoices);
 
         // So koennen wir einen Button finden und Click abfangen
-        button = findViewById(R.id.testButton);
-        button.setOnClickListener(new TestClass());
+  //      button = findViewById(R.id.testButton);
+        //     button.setOnClickListener(new TestClass());
 
         // API fuer REST fuer die Interaktion mit dem server
 //        retrofit = new Retrofit.Builder()
