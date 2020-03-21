@@ -1,5 +1,7 @@
 package com.example.selbsttest_corona;
 
+import android.content.SharedPreferences;
+
 import com.wirvsvirus.selftest.api.SelftestSubject;
 import com.wirvsvirus.selftest.api.selftest.Answer;
 import com.wirvsvirus.selftest.api.selftest.Question;
@@ -72,20 +74,22 @@ public class Communication {
     }
 
     public Single<Long> createNewSelftest() {
-        Single<Long> selftestId = api.selftestCreateNew(this.subjectId);
-        return selftestId;
+        Single<Long> selftestIdJob = api.selftestCreateNew(this.getSubjectId());
+        return selftestIdJob;
     }
 
     public Single<Selftest> getSelftestFromId() {
-        Single<Selftest> selftest = api.selftestGetFromId(this.subjectId, this.selftestId);
-        return selftest;
+        Single<Selftest> selftestJob = api.selftestGetFromId(this.getSubjectId(), this.getSelftestId());
+        return selftestJob;
     }
 
     public Single<Question> getQuestion() {
-        // TODO
+        Single<Question> questionJob = api.questionGetNext(this.getSubjectId(), this.getSelftestId());
+        return questionJob;
     }
 
-    public void answerQuestion(Answer answer) {
-        /// TODO
+    public Single<Void> answerQuestion(Question answeredQuestion) {
+        Single<Void> answerQuestionJob = api.questionAnswer(this.getSubjectId(), this.getSelftestId(), answeredQuestion);
+        return answerQuestionJob;
     }
 }
