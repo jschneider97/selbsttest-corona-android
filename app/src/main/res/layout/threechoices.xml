@@ -31,7 +31,8 @@
             android:id="@+id/buttonthree1"
             android:layout_width="match_parent"
             android:layout_height="85dp"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <RadioButton
             android:id="@+id/buttonthree2"
@@ -51,8 +52,11 @@
         android:layout_width="170dp"
         android:layout_height="65dp"
         android:text="Weiter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroupThree" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupThree"
+        app:layout_constraintVertical_bias="0.725" />
 </androidx.constraintlayout.widget.ConstraintLayout>
