@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewtwo"
+        android:layout_width="318dp"
+        android:layout_height="123dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <RadioGroup
+        android:id="@+id/grouptwo"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/buttontwo1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtwo"
+        app:layout_constraintVertical_bias="0.17000002">
+
+        <RadioButton
+            android:id="@+id/buttontwo1"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttontwo2"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:text="Nutzloser Knopf"
+            android:visibility="visible" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitButtontwo"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:text="Weiter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grouptwo"
+        app:layout_constraintVertical_bias="0.646" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

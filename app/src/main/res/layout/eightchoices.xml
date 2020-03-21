@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewEight"
+        android:layout_width="305dp"
+        android:layout_height="102dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="298dp"
+        android:layout_height="398dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.331"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462">
+
+        <RadioButton
+            android:id="@+id/buttoneight1"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttoneight2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttoneight3"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttoneight4"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttoneight5"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttoneight6"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttoneight7"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttoneight8"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitbutton8"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:text="Weiter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
