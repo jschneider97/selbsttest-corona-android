@@ -29,6 +29,9 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
+import static com.wirvsvirus.selftest.api.enums.QuestionType.CHOICE_QUESTION;
+import static com.wirvsvirus.selftest.api.enums.QuestionType.DATE_QUESTION;
+
 public class SecondActivity extends AppCompatActivity {
     int numberofAnswers;
     Question nextQuestion;

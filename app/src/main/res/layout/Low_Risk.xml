@@ -23,37 +23,33 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lowsubmit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/low_risk_form"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintVertical_bias="0.79" />
 
     <EditText
         android:id="@+id/lowmail"
         android:layout_width="231dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="320dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finalform" />
+        app:layout_constraintTop_toBottomOf="@+id/low_risk_form"
+        app:layout_constraintVertical_bias="0.13999999" />
 
     <TextView
         android:id="@+id/ignorelowtext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="31dp"
         android:text="Email-Adresse"
-        app:layout_constraintBottom_toTopOf="@+id/emailform"
+        app:layout_constraintBottom_toTopOf="@+id/lowmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finalform"
+        app:layout_constraintTop_toBottomOf="@+id/low_risk_form"
         app:layout_constraintVertical_bias="0.69" />
 
     <TextView
@@ -61,12 +57,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telefonnummer"
-        app:layout_constraintBottom_toTopOf="@+id/phonenumber"
+        app:layout_constraintBottom_toTopOf="@+id/lowphone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finalform"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintTop_toBottomOf="@+id/lowmail"
+        app:layout_constraintVertical_bias="0.81" />
 
     <Button
         android:id="@+id/lowsubmit"
@@ -76,7 +71,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finalform"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintTop_toBottomOf="@+id/lowmail"
+        app:layout_constraintVertical_bias="0.56" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
