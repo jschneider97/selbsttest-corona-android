@@ -216,8 +216,8 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
-        getQuestion(); // TODO: Async call mit linearen ablauf schreit nach fehlern, besonders
-        // so nah beinander
+        getQuestion();
+        // TODO: Hier vielleicht ein "bitte warten" oder lade-symbol / animation einbinden
     }
 
     class Class2 implements View.OnClickListener {
