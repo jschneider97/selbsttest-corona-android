@@ -5,24 +5,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
-    Retrofit retrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button button;
+        Retrofit retrofit;
+        TextView textView = findViewById(R.id.textViewMain);
+        EditText postalNumber = findViewById(R.id.postalNumber);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.eightchoices);
+        setContentView(R.layout.activity_main);
 
         // So koennen wir einen Button finden und Click abfangen
-  //      button = findViewById(R.id.testButton);
-        //     button.setOnClickListener(new TestClass());
+        button = findViewById(R.id.testButton);
+        button.setOnClickListener(new TestClass());
 
         // API fuer REST fuer die Interaktion mit dem server
 //        retrofit = new Retrofit.Builder()
@@ -37,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
+            EditText postalNumber = findViewById(R.id.postalNumber);
+        TextView textView = findViewById(R.id.textViewMain);
+        postalNumber.setPaintFlags(0);
+        textView.setText(postalNumber.getEditableText().toString());
+            Button button = findViewById( R.id.testButton);
             button.setEnabled(false);
         }
     }
