@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textViewSix"
-        android:layout_width="350dp"
-        android:layout_height="106dp"
+        android:layout_width="315dp"
+        android:layout_height="82dp"
         android:text="TextViewSix"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,17 +28,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSix"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <RadioGroup
         android:id="@+id/RadioGroupSix"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="329dp"
+        android:layout_height="418dp"
+        app:layout_constraintBottom_toTopOf="@+id/submitbuttonsix"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSix"
-        app:layout_constraintVertical_bias="0.13">
+        app:layout_constraintVertical_bias="0.32999998">
 
         <RadioButton
             android:id="@+id/buttonsix1"
