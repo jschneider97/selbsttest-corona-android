@@ -19,7 +19,7 @@
 
     <RadioGroup
         android:id="@+id/radioGroupThree"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,26 +30,26 @@
         <RadioButton
             android:id="@+id/buttonthree1"
             android:layout_width="match_parent"
-            android:layout_height="82dp"
+            android:layout_height="85dp"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/buttonthree2"
-            android:layout_width="320dp"
-            android:layout_height="79dp"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/buttonthree3"
             android:layout_width="match_parent"
-            android:layout_height="73dp"
+            android:layout_height="85dp"
             android:text="RadioButton" />
     </RadioGroup>
 
     <Button
         android:id="@+id/submitbuttonthree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
         android:text="Weiter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

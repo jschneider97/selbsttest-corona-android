@@ -19,19 +19,20 @@
 
     <Button
         android:id="@+id/submitbuttonsix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
         android:text="Weiter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSix"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintVertical_bias="0.917" />
 
     <RadioGroup
         android:id="@+id/RadioGroupSix"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,26 +42,26 @@
 
         <RadioButton
             android:id="@+id/buttonsix1"
-            android:layout_width="277dp"
-            android:layout_height="71dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:text="test" />
 
         <RadioButton
             android:id="@+id/buttonsix2"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="70dp"
             android:text="test" />
 
         <RadioButton
             android:id="@+id/buttonsix3"
             android:layout_width="match_parent"
-            android:layout_height="71dp"
+            android:layout_height="70dp"
             android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/buttonsix4"
             android:layout_width="match_parent"
-            android:layout_height="81dp"
+            android:layout_height="70dp"
             android:text="RadioButton" />
 
         <RadioButton
