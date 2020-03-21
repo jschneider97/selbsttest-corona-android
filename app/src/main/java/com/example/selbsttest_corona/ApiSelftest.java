@@ -25,11 +25,11 @@ public interface ApiSelftest {
     Single<Long> subjectOnServerCreateNew(@Body SelftestSubject selftestSubject);
 
     @PUT("/api/subject/")
-    void subjectOnServerOverwriteId(@Query("id") long id,
-                                    @Body SelftestSubject selftestSubject);
+    Single<Void> subjectOnServerOverwriteId(@Query("id") long id,
+                                            @Body SelftestSubject selftestSubject);
 
     @DELETE("/api/subject/")
-    void subjectOnServerDeleteId(@Query("id") long id);
+    Single<Void> subjectOnServerDeleteId(@Query("id") long id);
 
 
 
@@ -48,12 +48,12 @@ public interface ApiSelftest {
     Single<Question> questionGetNext(@Path("id") long id, @Path("selftest-id") long selftestId);
 
     @POST("/api/subject/{id}/selftest/{selftest-id}/question")
-    void questionAnswer(@Path("id") long id, @Path("selftest-id") long selftestId,
-                        @Body Question answeredQuestion);
+    Single<Void> questionAnswer(@Path("id") long id, @Path("selftest-id") long selftestId,
+                                @Body Question answeredQuestion);
 
 
 
     @POST("/api/subject/{id}/contact")
-    void contactSend(@Path("id") long id,
-                     @Body Contact contact);
+    Single<Void> contactSend(@Path("id") long id,
+                             @Body Contact contact);
 }
