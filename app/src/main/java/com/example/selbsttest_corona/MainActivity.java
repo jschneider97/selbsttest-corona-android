@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                             // beim naechsten Start eine neue ID anmelden
                             Communication.getInstance().setSubjectId(id.longValue());
                             saveSubjectIdToSharedPreferences(id.longValue());
-                            //doSelftest();
+                            doSelftest();
                         }
 
                         @Override
