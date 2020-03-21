@@ -46,7 +46,8 @@ public class SecondActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Question question) {
                         if (question == null) {
-                            askforResult();
+                            Intent i = new Intent(SecondActivity.this,FinalActivity.class);
+                            startActivity(i);
                         }
                         else {
                             nextQuestion = question;
@@ -58,9 +59,6 @@ public class SecondActivity extends AppCompatActivity {
                         info.show();
                     }
                 });
-    }
-    public void askforResult(){
-
     }
 
     @Override
@@ -256,6 +254,7 @@ public class SecondActivity extends AppCompatActivity {
             DateAnswer dateAnswer = new DateAnswer();
             dateAnswer.setAnswerDate(d);
             Answer a = dateAnswer;
+            giveAnswer(a);
         }
 
         public void twochoices() {
@@ -268,6 +267,7 @@ public class SecondActivity extends AppCompatActivity {
             else{
                 a = nextQuestion.getAnswers().get(1);
             }
+            giveAnswer(a);
         }
 
         public void threechoices() {
@@ -284,28 +284,175 @@ public class SecondActivity extends AppCompatActivity {
             else {
              a = nextQuestion.getAnswers().get(2);
             }
-
+            giveAnswer(a);
         }
 
         public void fourchoices() {
-
+            RadioButton r41 = findViewById(R.id.buttonfour1);
+            RadioButton r42 = findViewById(R.id.buttonfour2);
+            RadioButton r43 = findViewById(R.id.buttonfour3);
+            RadioButton r44 = findViewById(R.id.buttonfour4);
+            Answer a;
+            if(r41.isChecked()){
+                a = nextQuestion.getAnswers().get(0);
+            }
+            else if(r42.isChecked()){
+                a=nextQuestion.getAnswers().get(1);
+            }
+            else if(r43.isChecked()){
+                a = nextQuestion.getAnswers().get(2);
+            }
+            else{
+                a = nextQuestion.getAnswers().get(3);
+            }
+            giveAnswer(a);
         }
 
         public void fivechoices() {
-
+            RadioButton r51 = findViewById(R.id.radiobuttonfive1);
+            RadioButton r52 = findViewById(R.id.radiobuttonfive2);
+            RadioButton r53 = findViewById(R.id.radiobuttonfive3);
+            RadioButton r54 = findViewById(R.id.radiobuttonfive4);
+            Answer a;
+            if(r51.isChecked()){
+                a = nextQuestion.getAnswers().get(0);
+            }
+            else if(r52.isChecked()){
+                a=nextQuestion.getAnswers().get(1);
+            }
+            else if(r53.isChecked()){
+                a = nextQuestion.getAnswers().get(2);
+            }
+            else if(r54.isChecked()){
+                a = nextQuestion.getAnswers().get(3);
+            }
+            else{
+                a = nextQuestion.getAnswers().get(4);
+            }
+            giveAnswer(a);
         }
 
         public void sixchoices() {
-
+            RadioButton r61 = findViewById(R.id.buttonsix1);
+            RadioButton r62 = findViewById(R.id.buttonsix2);
+            RadioButton r63 = findViewById(R.id.buttonsix3);
+            RadioButton r64 = findViewById(R.id.buttonsix4);
+            RadioButton r65 = findViewById(R.id.buttonsix5);
+            Answer a;
+            if(r61.isChecked()){
+                a = nextQuestion.getAnswers().get(0);
+            }
+            else if(r62.isChecked()){
+                a=nextQuestion.getAnswers().get(1);
+            }
+            else if(r63.isChecked()){
+                a = nextQuestion.getAnswers().get(2);
+            }
+            else if(r64.isChecked()){
+                a = nextQuestion.getAnswers().get(3);
+            }
+            else if(r65.isChecked()){
+                a = nextQuestion.getAnswers().get(4);
+            }
+            else{
+                a = nextQuestion.getAnswers().get(5);
+            }
+            giveAnswer(a);
         }
 
         public void sevenchoices() {
-
+            RadioButton r71 = findViewById(R.id.radioButtonseven1);
+            RadioButton r72 = findViewById(R.id.radioButtonseven2);
+            RadioButton r73 = findViewById(R.id.radioButtonseven3);
+            RadioButton r74 = findViewById(R.id.radioButtonseven4);
+            RadioButton r75 = findViewById(R.id.radioButtonseven5);
+            RadioButton r76 = findViewById(R.id.radioButtonseven6);
+            Answer a;
+            if(r71.isChecked()){
+                a = nextQuestion.getAnswers().get(0);
+            }
+            else if(r72.isChecked()){
+                a=nextQuestion.getAnswers().get(1);
+            }
+            else if(r73.isChecked()){
+                a = nextQuestion.getAnswers().get(2);
+            }
+            else if(r74.isChecked()){
+                a = nextQuestion.getAnswers().get(3);
+            }
+            else if(r75.isChecked()){
+                a = nextQuestion.getAnswers().get(4);
+            }
+            else if(r76.isChecked()){
+                a = nextQuestion.getAnswers().get(5);
+            }
+            else{
+                a = nextQuestion.getAnswers().get(6);
+            }
+            giveAnswer(a);
         }
 
         public void eightchoices() {
+            RadioButton r81 = findViewById(R.id.buttoneight1);
+            RadioButton r82 = findViewById(R.id.buttoneight2);
+            RadioButton r83 = findViewById(R.id.buttoneight3);
+            RadioButton r84 = findViewById(R.id.buttoneight4);
+            RadioButton r85 = findViewById(R.id.buttoneight5);
+            RadioButton r86 = findViewById(R.id.buttoneight6);
+            RadioButton r87 = findViewById(R.id.buttoneight7);
+            RadioButton r88 = findViewById(R.id.buttoneight8);
+            Answer a;
+            if(r81.isChecked()){
+                a = nextQuestion.getAnswers().get(0);
+            }
+            else if(r82.isChecked()){
+                a=nextQuestion.getAnswers().get(1);
+            }
+            else if(r83.isChecked()){
+                a = nextQuestion.getAnswers().get(2);
+            }
+            else if(r84.isChecked()){
+                a = nextQuestion.getAnswers().get(3);
+            }
+            else if(r85.isChecked()){
+                a = nextQuestion.getAnswers().get(4);
+            }
+            else if(r86.isChecked()){
+                a = nextQuestion.getAnswers().get(5);
+            }
+            else if(r87.isChecked()){
+                a = nextQuestion.getAnswers().get(6);
+            }
+            else{
+                a = nextQuestion.getAnswers().get(7);
+            }
+            giveAnswer(a);
+        }
+        public void giveAnswer(Answer a){
+            nextQuestion.setAnswer(a);
+                Single<Void> answerJob = Communication.getInstance().answerQuestion(nextQuestion);
+                final CompositeDisposable comepositeDisposable = new CompositeDisposable();
+                answerJob.subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new SingleObserver<Void>() {
+                            @Override
+                            public void onSubscribe(Disposable d) {
+                                comepositeDisposable.add(d);
 
+                            }
+
+                            @Override
+                            public void onSuccess(Void voidy) {
+                                Intent i = new Intent(SecondActivity.this,SecondActivity.class);
+                                startActivity(i);
+                            }
+                            @Override
+                            public void onError(Throwable e) {
+                                Toast info = Toast.makeText(getApplicationContext(),"Fehler",Toast.LENGTH_SHORT);
+                                info.show();
+                            }
+                        });
+            }
         }
     }
-}
 
