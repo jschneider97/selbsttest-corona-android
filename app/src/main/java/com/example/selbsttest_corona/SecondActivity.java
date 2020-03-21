@@ -71,6 +71,8 @@ public class SecondActivity extends AppCompatActivity {
             case CHOICE_QUESTION:
                 numberofAnswers = q.getAnswers().size();
                 break;
+            default: Toast info = Toast.makeText(getApplicationContext(),"Fehler",Toast.LENGTH_SHORT);
+                info.show();
         }
         Button b;
         switch (numberofAnswers) {
