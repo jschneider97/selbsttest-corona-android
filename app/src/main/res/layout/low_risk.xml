@@ -45,7 +45,7 @@
         android:id="@+id/ignorelowtext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email-Adresse"
+        android:text="E-Mail-Adresse"
         app:layout_constraintBottom_toTopOf="@+id/lowmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
