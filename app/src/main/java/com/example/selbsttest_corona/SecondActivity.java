@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.wirvsvirus.selftest.api.enums.QuestionType;
 import com.wirvsvirus.selftest.api.selftest.Answer;
 import com.wirvsvirus.selftest.api.selftest.ChoiceAnswer;
 import com.wirvsvirus.selftest.api.selftest.DateAnswer;
@@ -50,23 +51,19 @@ public class SecondActivity extends AppCompatActivity {
                             startActivity(i);
                         }
                         else {
-                            nextQuestion = question;
+                            receivedQuestion(question);
                         }
                     }
                     @Override
                     public void onError(Throwable e) {
-                        Toast info = Toast.makeText(getApplicationContext(),"Fehler",Toast.LENGTH_SHORT);
+                        Toast info = Toast.makeText(getApplicationContext(),"Fehler bei getQuestion",Toast.LENGTH_SHORT);
                         info.show();
                     }
                 });
     }
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
-        getQuestion();
-        Question q = nextQuestion;
+    protected void receivedQuestion(Question question) {
+        Question q = question;
         switch (q.getQuestionType()) {
             case DATE_QUESTION:
                 numberofAnswers = 1;
@@ -213,7 +210,14 @@ public class SecondActivity extends AppCompatActivity {
                 b.setOnClickListener(new Class2());
                 break;
         }
+    }
 
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+        getQuestion(); // TODO: Async call mit linearen ablauf schreit nach fehlern, besonders
+        // so nah beinander
     }
 
     class Class2 implements View.OnClickListener {
@@ -448,7 +452,7 @@ public class SecondActivity extends AppCompatActivity {
                             }
                             @Override
                             public void onError(Throwable e) {
-                                Toast info = Toast.makeText(getApplicationContext(),"Fehler",Toast.LENGTH_SHORT);
+                                Toast info = Toast.makeText(getApplicationContext(),"Fehler bei answerQuestion",Toast.LENGTH_SHORT);
                                 info.show();
                             }
                         });
