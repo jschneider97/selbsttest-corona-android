@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             //
             // Aktuelle Alternative:
             // Wir springen direkt zu der Frage
-            doSelftest();
+            //doSelftest();
         }
     }
 
@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void doSelftest() {
+        if (compositeDisposable == null) {
+            compositeDisposable = new CompositeDisposable();
+        }
         Single<Long> selftestIdJob = Communication.getInstance().createNewSelftest();
         selftestIdJob.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -82,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                         Communication.getInstance().setSelftestId(id.longValue());
                         Intent i = new Intent(MainActivity.this, SecondActivity.class);
                         compositeDisposable.dispose();
-  //                      startActivity(i);
+                        startActivity(i);
                     }
 
                     @Override
@@ -116,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                             // beim naechsten Start eine neue ID anmelden
                             Communication.getInstance().setSubjectId(id.longValue());
                             saveSubjectIdToSharedPreferences(id.longValue());
-                            doSelftest();
+                            //doSelftest();
                         }
 
                         @Override
