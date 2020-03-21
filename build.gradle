@@ -5,6 +5,13 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url "http://82.165.206.240:8080/repository/snapshots/"
+            credentials {
+                username 'developer'
+                password 'kbse2019'
+            }
+        }
         
     }
     dependencies {
