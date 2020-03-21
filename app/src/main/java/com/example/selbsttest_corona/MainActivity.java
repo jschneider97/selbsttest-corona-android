@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new TestClass());
 
         // API fuer REST fuer die Interaktion mit dem server
-        retrofit = new Retrofit.Builder()
-                .baseUrl("TODO: API's base URL")
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .build();
+//        retrofit = new Retrofit.Builder()
+//                .baseUrl("TODO: API's base URL")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//                .build();
     }
 
     // Handler class fuer den Button
