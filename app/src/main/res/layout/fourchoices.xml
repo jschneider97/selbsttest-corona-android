@@ -30,6 +30,7 @@
             android:id="@+id/buttonfour1"
             android:layout_width="350dp"
             android:layout_height="80dp"
+            android:checked="true"
             android:text="RadioButton" />
 
         <RadioButton
