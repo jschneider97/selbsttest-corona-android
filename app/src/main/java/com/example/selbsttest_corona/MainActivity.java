@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                         Communication.getInstance().setSelftestId(id.longValue());
                         Intent i = new Intent(MainActivity.this, SecondActivity.class);
                         compositeDisposable.dispose();
-                        startActivity(i);
+  //                      startActivity(i);
                     }
 
                     @Override
