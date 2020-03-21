@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         public void doSelftest(final Long id2){
             final long l = id2;
-            Single<Long> selftestID = Communication.getInstance().createNewSelftest(id2);
+            final Single<Long> selftestID = Communication.getInstance().createNewSelftest();
             final CompositeDisposable comepositeDisposable = new CompositeDisposable();
             selftestID.subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
@@ -63,7 +63,10 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void onSuccess(Long id) {
-                            startTest(l,id);
+                            Communication.getInstance().setSelftestId(id);
+                            Communication.getInstance().setSubjectId(id2);
+                            Intent i = new Intent(MainActivity.this,SecondActivity.class);
+                            startActivity(i);
                         }
 
                         @Override
@@ -106,33 +109,6 @@ public class MainActivity extends AppCompatActivity {
             Button button = findViewById(R.id.testButton);
             button.setEnabled(false);
         }
-    public void startTest(final Long subjectID, final Long SelftestID){
-            Single<Question> keineAhnungWas = Communication.getInstance().getQuestion(subjectID,SelftestID);
-        final CompositeDisposable comepositeDisposable = new CompositeDisposable();
-        keineAhnungWas.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new SingleObserver<Question>() {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-                        comepositeDisposable.add(d);
 
-                    }
-
-                    @Override
-                    public void onSuccess(Question question) {
-                        Communication.getInstance().setSelftestId(SelftestID);
-                        Communication.getInstance().setSubjectId(subjectID);
-                        Intent i = new Intent(MainActivity.this,SecondActivity.class);
-                        startActivity(i);
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Toast info = Toast.makeText(getApplicationContext(),"Fehler",Toast.LENGTH_SHORT);
-                        info.show();
-                    }
-                });
-    }
-    }
 
 }

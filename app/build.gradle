@@ -30,18 +30,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> ddcf55c52566e161f2a64113038b1f1829f3cd65
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> ddcf55c52566e161f2a64113038b1f1829f3cd65
 }
 
 

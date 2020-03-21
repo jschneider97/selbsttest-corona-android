@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.06" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupeight"
         android:layout_width="298dp"
         android:layout_height="398dp"
         app:layout_constraintBottom_toBottomOf="parent"
