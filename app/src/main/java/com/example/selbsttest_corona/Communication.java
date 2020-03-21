@@ -22,6 +22,25 @@ public class Communication {
     private Retrofit retrofit;
     private ApiSelftest api;
 
+    public long getSubjectId() {
+        return subjectId;
+    }
+
+    public void setSubjectId(long subjectId) {
+        this.subjectId = subjectId;
+    }
+
+    public long getSelftestId() {
+        return selftestId;
+    }
+
+    public void setSelftestId(long selftestId) {
+        this.selftestId = selftestId;
+    }
+
+    private long subjectId;
+    private long selftestId;
+
     private static Communication instance;
     public static Communication getInstance() {
         if (instance == null) {
