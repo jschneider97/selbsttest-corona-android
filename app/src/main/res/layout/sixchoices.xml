@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewSix"
+        android:layout_width="350dp"
+        android:layout_height="106dp"
+        android:text="TextViewSix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Button
+        android:id="@+id/submitbuttonsix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weiter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSix"
+        app:layout_constraintVertical_bias="0.87" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroupSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSix"
+        app:layout_constraintVertical_bias="0.13">
+
+        <RadioButton
+            android:id="@+id/buttonsix1"
+            android:layout_width="277dp"
+            android:layout_height="71dp"
+            android:text="test" />
+
+        <RadioButton
+            android:id="@+id/buttonsix2"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="test" />
+
+        <RadioButton
+            android:id="@+id/buttonsix3"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttonsix4"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttonsix5"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/buttonsix6"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
