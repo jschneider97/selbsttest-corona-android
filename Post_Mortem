@@ -1,0 +1,15 @@
+Big, Post-Mortem list of everything this app is lacking:
+ - We're not familiar with android development. Thus the Date Input seems to be broken, which results in a "400 - Bad Request" from the backend
+ - While we do have the ability do store the "subjectID" on the device so we don't spam the backend full with every test we take, we disabled it for now for development purposes
+ - Different categories for the whole app would be nice. 
+   - Overview over everything the app has to offer
+   - Take a look at the data the user has input so far / server statistics
+     - With the zipcodes the backend collects one could be able to put some nice visualisations in there
+   - News tab / newest development about corona (?)
+ - The backend has the ability to collect personal contact data - the app however does not support it
+   - This could come in quite handy if certain symptoms happen to be more severe than initially thought, and a reevalution of the data concludes that the person should seek medical attention
+ - We do not actually calculate proper results at the end of the test. The data is all there on the backend however.
+ - The whole Interface is a hack. However it seems to work _somewhat_, but I wouldn't advise anyone building ontop of it at this point
+ 
+Again: 
+The most experienced person on our team, Justus, did all the heavy lifting here. He single-handedly created the backend with which the rest of the team, being at least somewhat new to android development, were able to build this "prototype" of an app for it.
