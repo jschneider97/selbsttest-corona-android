@@ -8,9 +8,9 @@
 
     <TextView
         android:id="@+id/medium_risk_form"
-        android:layout_width="350dp"
-        android:layout_height="239dp"
-        android:text="TextView"
+        android:layout_width="339dp"
+        android:layout_height="250dp"
+        android:text="Sie haben sich mit einer mittleren Wahrscheinlichkeit mit dem Covid-19 Virus infiziert. Im Zweifelsfall sollte eine ärztliche Einschätzung eingeholt werden. Die Einschätzung dieser App ersetzt kein eindeutiges medizinisches Ergebnis. Halten Sie sich weiterhin an die aktuellen Vorgaben und Empfehlungen der Bundesregierung und der Regierung Ihres Landes, sowie des Robert-Koch-Instituts. Weitere Informationen: https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +19,8 @@
 
     <EditText
         android:id="@+id/mediummail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/mediumphone"
@@ -41,13 +41,14 @@
 
     <EditText
         android:id="@+id/mediumphone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:ems="10"
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medium_risk_form"
-        tools:layout_editor_absoluteX="98dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medium_risk_form" />
 
     <TextView
         android:id="@+id/ignoremediumtext2"
@@ -68,5 +69,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mediumphone"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintVertical_bias="0.31" />
 </androidx.constraintlayout.widget.ConstraintLayout>

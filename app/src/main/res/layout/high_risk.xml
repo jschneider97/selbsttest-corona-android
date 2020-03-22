@@ -9,82 +9,69 @@
     <TextView
         android:id="@+id/hogh_risk_form"
         android:layout_width="339dp"
-        android:layout_height="185dp"
-        android:text="text"
+        android:layout_height="250dp"
+        android:text="Sie haben sich mit einer hohen Wahrscheinlichkeit mit dem Covid-19 Virus infiziert. Sie sollten umgehend das zuständige Gesundheitsamt informieren und eine ärztliche Einschätzung einholen. Die Einschätzung dieser App ersetzt kein eindeutiges medizinisches Ergebnis. Halten Sie sich weiterhin an die aktuellen Vorgaben und Empfehlungen der Bundesregierung und der Regierung Ihres Landes, sowie des Robert-Koch-Instituts. Weitere Informationen: https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintVertical_bias="0.060000002" />
 
     <EditText
         android:id="@+id/highmail"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="104dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/highphone"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <EditText
         android:id="@+id/highphone"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="126dp"
-        android:layout_marginBottom="292dp"
         android:ems="10"
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hogh_risk_form"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.16000003" />
 
     <TextView
         android:id="@+id/ignorehightext1"
-        android:layout_width="165dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="79dp"
         android:layout_marginBottom="20dp"
         android:text="Email-Adresse"
         app:layout_constraintBottom_toTopOf="@+id/highphone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hogh_risk_form"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/ignorehightext2"
-        android:layout_width="165dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginBottom="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Telefonnummer"
         app:layout_constraintBottom_toTopOf="@+id/highmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/highphone"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.75" />
 
     <Button
         android:id="@+id/highsubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
         android:text="Abschicken"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/highmail"
         app:layout_constraintVertical_bias="0.303" />
