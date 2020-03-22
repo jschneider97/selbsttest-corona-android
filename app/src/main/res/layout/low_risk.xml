@@ -10,12 +10,12 @@
         android:id="@+id/low_risk_form"
         android:layout_width="291dp"
         android:layout_height="250dp"
-        android:text="TextView"
+        android:text="Sie haben sich mit einer geringen Wahrscheinlichkeit mit dem Covid-19 Virus infiziert. Diese Einschätzung ersetzt kein eindeutiges medizinisches Ergebnis. Halten Sie sich weiterhin an die aktuellen Vorgaben und Empfehlungen der Bundesregierung und der Regierung Ihres Landes, sowie des Robert-Koch-Instituts. Weitere Informationen: Robert-Koch-Institut, Bundesregierung, Gesundheitsministerium, WHO "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintVertical_bias="0.033" />
 
     <EditText
         android:id="@+id/lowphone"

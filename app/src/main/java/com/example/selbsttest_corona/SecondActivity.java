@@ -262,14 +262,13 @@ public class SecondActivity extends AppCompatActivity {
             Date d = (Date) date.getText();
             DateAnswer dateAnswer = new DateAnswer();
             dateAnswer.setAnswerDate(d);
-            Answer a = dateAnswer;
-            giveAnswer(a);
+            giveAnswer(dateAnswer);
         }
 
         public void twochoices() {
             RadioButton r21 = findViewById(R.id.buttontwo1);
             RadioButton r22 = findViewById(R.id.buttontwo2);
-            Answer a;
+            ChoiceAnswer a;
             if(r21.isChecked()){
                 a = nextQuestion.getAnswers().get(0);
             }
@@ -283,7 +282,7 @@ public class SecondActivity extends AppCompatActivity {
             RadioButton r31 = findViewById(R.id.buttonthree1);
             RadioButton r32 = findViewById(R.id.buttonthree2);
             RadioButton r33 = findViewById(R.id.buttonthree3);
-            Answer a;
+            ChoiceAnswer a;
             if(r31.isChecked()){
              a = nextQuestion.getAnswers().get(0);
             }
@@ -301,7 +300,7 @@ public class SecondActivity extends AppCompatActivity {
             RadioButton r42 = findViewById(R.id.buttonfour2);
             RadioButton r43 = findViewById(R.id.buttonfour3);
             RadioButton r44 = findViewById(R.id.buttonfour4);
-            Answer a;
+            ChoiceAnswer a;
             if(r41.isChecked()){
                 a = nextQuestion.getAnswers().get(0);
             }
@@ -322,7 +321,7 @@ public class SecondActivity extends AppCompatActivity {
             RadioButton r52 = findViewById(R.id.radiobuttonfive2);
             RadioButton r53 = findViewById(R.id.radiobuttonfive3);
             RadioButton r54 = findViewById(R.id.radiobuttonfive4);
-            Answer a;
+            ChoiceAnswer a;
             if(r51.isChecked()){
                 a = nextQuestion.getAnswers().get(0);
             }
@@ -347,7 +346,7 @@ public class SecondActivity extends AppCompatActivity {
             RadioButton r63 = findViewById(R.id.buttonsix3);
             RadioButton r64 = findViewById(R.id.buttonsix4);
             RadioButton r65 = findViewById(R.id.buttonsix5);
-            Answer a;
+            ChoiceAnswer a;
             if(r61.isChecked()){
                 a = nextQuestion.getAnswers().get(0);
             }
@@ -376,7 +375,7 @@ public class SecondActivity extends AppCompatActivity {
             RadioButton r74 = findViewById(R.id.radioButtonseven4);
             RadioButton r75 = findViewById(R.id.radioButtonseven5);
             RadioButton r76 = findViewById(R.id.radioButtonseven6);
-            Answer a;
+            ChoiceAnswer a;
             if(r71.isChecked()){
                 a = nextQuestion.getAnswers().get(0);
             }
@@ -410,12 +409,12 @@ public class SecondActivity extends AppCompatActivity {
             RadioButton r86 = findViewById(R.id.buttoneight6);
             RadioButton r87 = findViewById(R.id.buttoneight7);
             RadioButton r88 = findViewById(R.id.buttoneight8);
-            Answer a;
+            ChoiceAnswer a;
             if(r81.isChecked()){
                 a = nextQuestion.getAnswers().get(0);
             }
             else if(r82.isChecked()){
-                a=nextQuestion.getAnswers().get(1);
+                a = nextQuestion.getAnswers().get(1);
             }
             else if(r83.isChecked()){
                 a = nextQuestion.getAnswers().get(2);
@@ -438,7 +437,11 @@ public class SecondActivity extends AppCompatActivity {
             giveAnswer(a);
         }
         public void giveAnswer(Answer a){
-            nextQuestion.setAnswer(a);
+            if(a instanceof DateAnswer){
+                nextQuestion.setDateAnswer(a);
+            } else {
+                nextQuestion.setChoiceAnswer(a);
+            }
                 Single<Void> answerJob = Communication.getInstance().answerQuestion(nextQuestion);
                 final CompositeDisposable comepositeDisposable = new CompositeDisposable();
                 answerJob.subscribeOn(Schedulers.io())
@@ -464,4 +467,3 @@ public class SecondActivity extends AppCompatActivity {
             }
         }
     }
-
