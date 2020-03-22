@@ -8,6 +8,7 @@ import com.wirvsvirus.selftest.api.selftest.Question;
 import com.wirvsvirus.selftest.api.selftest.Selftest;
 
 import io.reactivex.Single;
+import okhttp3.ResponseBody;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -88,8 +89,8 @@ public class Communication {
         return questionJob;
     }
 
-    public Single<Void> answerQuestion(Question answeredQuestion) {
-        Single<Void> answerQuestionJob = api.questionAnswer(this.getSubjectId(), this.getSelftestId(), answeredQuestion);
+    public Single<ResponseBody> answerQuestion(Question answeredQuestion) {
+        Single<ResponseBody> answerQuestionJob = api.questionAnswer(this.getSubjectId(), this.getSelftestId(), answeredQuestion);
         return answerQuestionJob;
     }
 }

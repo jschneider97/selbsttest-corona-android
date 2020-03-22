@@ -9,6 +9,8 @@ import com.wirvsvirus.selftest.api.selftest.Selftest;
 import java.util.List;
 
 import io.reactivex.Single;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -25,11 +27,11 @@ public interface ApiSelftest {
     Single<Long> subjectOnServerCreateNew(@Body SelftestSubject selftestSubject);
 
     @PUT("/api/subject/")
-    Single<Void> subjectOnServerOverwriteId(@Query("id") long id,
-                                            @Body SelftestSubject selftestSubject);
+    Single<ResponseBody> subjectOnServerOverwriteId(@Query("id") long id,
+                                                @Body SelftestSubject selftestSubject);
 
     @DELETE("/api/subject/")
-    Single<Void> subjectOnServerDeleteId(@Query("id") long id);
+    Single<ResponseBody> subjectOnServerDeleteId(@Query("id") long id);
 
 
 
@@ -48,12 +50,12 @@ public interface ApiSelftest {
     Single<Question> questionGetNext(@Path("id") long id, @Path("selftest-id") long selftestId);
 
     @POST("/api/subject/{id}/selftest/{selftest-id}/question")
-    Single<Void> questionAnswer(@Path("id") long id, @Path("selftest-id") long selftestId,
-                                @Body Question answeredQuestion);
+    Single<ResponseBody> questionAnswer(@Path("id") long id, @Path("selftest-id") long selftestId,
+                                        @Body Question answeredQuestion);
 
 
 
     @POST("/api/subject/{id}/contact")
-    Single<Void> contactSend(@Path("id") long id,
-                             @Body Contact contact);
+    Single<ResponseBody> contactSend(@Path("id") long id,
+                                     @Body Contact contact);
 }

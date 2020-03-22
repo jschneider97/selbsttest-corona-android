@@ -28,6 +28,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.ResponseBody;
 
 import static com.wirvsvirus.selftest.api.enums.QuestionType.CHOICE_QUESTION;
 import static com.wirvsvirus.selftest.api.enums.QuestionType.DATE_QUESTION;
@@ -445,11 +446,11 @@ public class SecondActivity extends AppCompatActivity {
                 ChoiceAnswer answer = (ChoiceAnswer) a;
                 nextQuestion.setAnswer(answer);
             }
-                Single<Void> answerJob = Communication.getInstance().answerQuestion(nextQuestion);
+                Single<ResponseBody> answerJob = Communication.getInstance().answerQuestion(nextQuestion);
                 final CompositeDisposable comepositeDisposable = new CompositeDisposable();
                 answerJob.subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(new SingleObserver<Void>() {
+                        .subscribe(new SingleObserver<ResponseBody>() {
                             @Override
                             public void onSubscribe(Disposable d) {
                                 comepositeDisposable.add(d);
@@ -457,7 +458,7 @@ public class SecondActivity extends AppCompatActivity {
                             }
 
                             @Override
-                            public void onSuccess(Void voidy) {
+                            public void onSuccess(ResponseBody responseBody) {
                                 Intent i = new Intent(SecondActivity.this,SecondActivity.class);
                                 startActivity(i);
                             }
