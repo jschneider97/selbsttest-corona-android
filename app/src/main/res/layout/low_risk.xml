@@ -10,7 +10,7 @@
         android:id="@+id/low_risk_form"
         android:layout_width="339dp"
         android:layout_height="250dp"
-        android:text="Sie haben sich mit einer geringen Wahrscheinlichkeit mit dem Covid-19 Virus infiziert. Diese Einschätzung ersetzt kein eindeutiges medizinisches Ergebnis. Halten Sie sich weiterhin an die aktuellen Vorgaben und Empfehlungen der Bundesregierung und der Regierung Ihres Landes, sowie des Robert-Koch-Instituts. Weitere Informationen: https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html"
+        android:text="Sie haben sich mit einer geringen Wahrscheinlichkeit mit dem Covid-19 Virus infiziert. Diese Einschätzung ersetzt kein eindeutiges medizinisches Ergebnis. Halten Sie sich weiterhin an die aktuellen Vorgaben und Empfehlungen der Bundesregierung und der Regierung Ihres Landes, sowie des Robert-Koch-Instituts. Weitere Informationen: https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html \n \n \n \n Dies ist die Betaseite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
