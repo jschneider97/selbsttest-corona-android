@@ -47,7 +47,7 @@ public class Communication {
 
     public Communication() {
         this.retrofit = new Retrofit.Builder()
-                .baseUrl("http://82.165.206.240:8083/")
+                .baseUrl("http://82.165.206.240:8088/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
