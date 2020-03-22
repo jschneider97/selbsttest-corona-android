@@ -54,6 +54,7 @@ public class SecondActivity extends AppCompatActivity {
                             startActivity(i);
                         }
                         else {
+                            nextQuestion = question;
                             receivedQuestion(question);
                         }
                     }
