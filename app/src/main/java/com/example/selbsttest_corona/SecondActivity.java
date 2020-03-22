@@ -438,9 +438,11 @@ public class SecondActivity extends AppCompatActivity {
         }
         public void giveAnswer(Answer a){
             if(a instanceof DateAnswer){
-                nextQuestion.setDateAnswer(a);
+                DateAnswer answer = (DateAnswer) a;
+                nextQuestion.setDateAnswer(answer);
             } else {
-                nextQuestion.setChoiceAnswer(a);
+                ChoiceAnswer answer = (ChoiceAnswer) a;
+                nextQuestion.setAnswer(answer);
             }
                 Single<Void> answerJob = Communication.getInstance().answerQuestion(nextQuestion);
                 final CompositeDisposable comepositeDisposable = new CompositeDisposable();
