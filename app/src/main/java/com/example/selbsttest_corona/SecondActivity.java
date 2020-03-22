@@ -3,6 +3,7 @@ package com.example.selbsttest_corona;
 import android.app.AppComponentFactory;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,11 @@ import com.wirvsvirus.selftest.api.selftest.ChoiceAnswer;
 import com.wirvsvirus.selftest.api.selftest.DateAnswer;
 import com.wirvsvirus.selftest.api.selftest.Question;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 import io.reactivex.Single;
@@ -261,10 +267,27 @@ public class SecondActivity extends AppCompatActivity {
 
         public void datechoice() {
             EditText date = findViewById(R.id.dateEdit);
-            Date d = (Date) date.getText();
-            DateAnswer dateAnswer = new DateAnswer();
-            dateAnswer.setAnswerDate(d);
-            giveAnswer(dateAnswer);
+            Date d;
+            String text=date.getText().toString().trim();
+            if(text.isEmpty()){
+                Toast info = Toast.makeText(getApplicationContext(),"Fehlerhaftes Datum",Toast.LENGTH_SHORT);
+                info.show();
+            }
+            else {
+                DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+                try {
+                    d = df.parse(date.getText().toString());
+                    DateAnswer dateAnswer = new DateAnswer();
+                    dateAnswer.setAnswerDate(d);
+                    giveAnswer(dateAnswer);
+                } catch (ParseException e) {
+                    Toast info = Toast.makeText(getApplicationContext(), "Fehlerhaftes Datum", Toast.LENGTH_SHORT);
+                    info.show();
+                }
+
+
+
+            }
         }
 
         public void twochoices() {
@@ -466,6 +489,8 @@ public class SecondActivity extends AppCompatActivity {
                             public void onError(Throwable e) {
                                 Toast info = Toast.makeText(getApplicationContext(),"Fehler bei answerQuestion",Toast.LENGTH_SHORT);
                                 info.show();
+                                Intent i = new Intent(SecondActivity.this,SecondActivity.class);
+                                startActivity(i);
                             }
                         });
             }
